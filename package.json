@@ -4,7 +4,7 @@
   "description": "Convert code files into beautiful code snippets",
   "main": "src/index.js",
   "bin": {
-    "snippify": "./bin/cli.js"
+    "snapcode": "./bin/cli.js"
   },
   "scripts": {
     "test": "jest --forceExit",
@@ -12,15 +12,22 @@
     "test:coverage": "jest --coverage --forceExit",
     "test:ci": "jest --ci --coverage --forceExit --reporters='default' --reporters='jest-junit'",
     "test:update": "jest --updateSnapshot",
-    "test:clear": "jest --clearCache"
+    "test:clear": "jest --clearCache",
+    "test:converter": "jest test/converter.test.js",
+    "test:cli": "jest test/cli.test.js",
+    "build": "babel src -d dist",
+    "start": "node dist/index.js"
   },
   "keywords": [
     "code",
     "snippet",
     "formatter",
-    "highlighter"
+    "highlighter",
+    "converter",
+    "snapcode",
+    "snap"
   ],
-  "author": "",
+  "author": "Rishabh Shetty",
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",
@@ -30,6 +37,7 @@
     "puppeteer": "^19.7.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.25.9",
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
     "babel-jest": "^29.7.0",

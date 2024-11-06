@@ -1,7 +1,7 @@
 {
   "name": "codeframe-snap",
   "version": "1.0.0",
-  "description": "Convert code files into beautiful code snippets",
+  "description": "Convert code files into beautiful code snippets.",
   "main": "src/index.js",
   "bin": {
     "codeframe": "./bin/cli.js"

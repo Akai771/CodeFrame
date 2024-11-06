@@ -71,7 +71,7 @@ function generateOutputPath(inputPath) {
 
 // Setup the CLI program
 program
-  .name('snapcode')
+  .name('codeframe')
   .description('Convert code files into beautiful snippets')
   .version(packageJson.version);
 

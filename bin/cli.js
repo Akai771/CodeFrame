@@ -5,7 +5,7 @@ const { program } = require('commander');
 const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
-const Snapcode = require('../src/index');
+const Codeframe = require('../src/index');
 const packageJson = require('../package.json');
 
 // Utility function to handle errors
@@ -16,8 +16,8 @@ function handleError(error) {
 
 // Utility function to validate theme
 function validateTheme(theme) {
-  const snapcode = new Snapcode();
-  const availableThemes = snapcode.getThemes();
+  const codeframe = new Codeframe();
+  const availableThemes = codeframe.getThemes();
   
   if (!availableThemes.includes(theme)) {
     throw new Error(
@@ -38,7 +38,7 @@ function validateNumber(value, name) {
 
 // Utility function to process a single file
 async function processFile(inputPath, options) {
-  const snapcode = new Snapcode({
+  const codeframe = new Codeframe({
     theme: options.theme,
     padding: options.padding,
     fontSize: options.fontSize,
@@ -53,7 +53,7 @@ async function processFile(inputPath, options) {
   console.log(chalk.blue('Output:'), outputPath);
   
   try {
-    await snapcode.convertFile(inputPath, outputPath);
+    await codeframe.convertFile(inputPath, outputPath);
     console.log(chalk.green('✓ Success!'));
     return true;
   } catch (error) {
@@ -123,8 +123,8 @@ program
   .description('List available themes')
   .action(() => {
     try {
-      const snapcode = new Snapcode();
-      const themes = snapcode.getThemes();
+      const codeframe = new Codeframe();
+      const themes = codeframe.getThemes();
       
       console.log('\nAvailable themes:');
       themes.forEach(theme => {

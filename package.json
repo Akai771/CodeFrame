@@ -1,5 +1,5 @@
 {
-  "name": "snapcode",
+  "name": "code-frame",
   "version": "1.0.0",
   "description": "Convert code files into beautiful code snippets",
   "main": "src/index.js",
@@ -24,8 +24,9 @@
     "formatter",
     "highlighter",
     "converter",
-    "snapcode",
-    "snap"
+    "code-frame",
+    "snap",
+    "snip"
   ],
   "author": "Rishabh Shetty",
   "license": "MIT",

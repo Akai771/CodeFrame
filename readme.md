@@ -1,6 +1,6 @@
-# SnapCode
+# CodeFrame
 
-SnapCode is a powerful tool for converting code files into beautifully styled image snippets. It features CLI support, syntax highlighting, and customizable themes.
+CodeFrame is a powerful tool for converting code files into beautifully styled image snippets. It features CLI support, syntax highlighting, and customizable themes.
 
 ## Features
 - **Syntax Highlighting**: Supports multiple languages using `highlight.js`.
@@ -23,15 +23,15 @@ npm install snapcode
 ## Usage
 
 ### CLI Command
-Use the `snapcode` command to convert a code file into an image:
+Use the `codeframe` command to convert a code file into an image:
 
 ```bash
-snapcode convert <file> -o <output.png>
+codeframe convert <file> -o <output.png>
 ```
 
 ### Example
 ```bash
-snapcode convert example.js -o example.png
+codeframe convert example.js -o example.png
 ```
 
 ### Options

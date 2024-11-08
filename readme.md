@@ -46,6 +46,8 @@ Available themes:
 - **Monokai**
 - **GitHub**
 - **Dracula**
+- **OceanWave**
+- **Duotone**
 
 ## Development
 

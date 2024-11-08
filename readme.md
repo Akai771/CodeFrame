@@ -12,12 +12,12 @@ CodeFrame is a powerful tool for converting code files into beautifully styled i
 
 ### Install Globally
 ```bash
-npm install -g snapcode
+npm install -g codeframe-snap
 ```
 
 ### Install Locally
 ```bash
-npm install snapcode
+npm install codeframe-snap
 ```
 
 ## Usage

@@ -48,6 +48,7 @@ Available themes:
 - **Dracula**
 - **OceanWave**
 - **Duotone**
+- **AyuDark**
 
 ## Development
 

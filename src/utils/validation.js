@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 function validateInput(inputPath, outputPath) {
-  // Input file validation
   if (!fs.existsSync(inputPath)) {
     throw new Error(`Input file not found: ${inputPath}`);
   }
@@ -13,7 +12,6 @@ function validateInput(inputPath, outputPath) {
     throw new Error(`Input file is not readable: ${inputPath}`);
   }
 
-  // Extension validation
   const validInputExtensions = ['.js', '.py', '.java', '.cpp', '.html', '.css', '.rb', '.go', '.rs', '.ts'];
   const validOutputExtensions = ['.png', '.jpg', '.jpeg'];
   
@@ -28,10 +26,8 @@ function validateInput(inputPath, outputPath) {
     throw new Error(`Unsupported output file type: ${outputExt}`);
   }
 
-  // Output directory validation
   const outputDir = path.dirname(outputPath);
   
-  // Create output directory if it doesn't exist
   fs.mkdirSync(outputDir, { recursive: true });
 
   try {

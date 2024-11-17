@@ -14,9 +14,9 @@ class Converter {
   async initialize() {
     if (!this.browser) {
       this.browser = await puppeteer.launch({
-        headless: true, // Or headless: "new"
+        headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
-        timeout: 60000 // Increase this timeout if necessary
+        timeout: 60000
       });
     }
   }
